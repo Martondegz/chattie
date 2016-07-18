@@ -1,6 +1,10 @@
 body{
-	background-color: black;
+	background-color:black;
+	font-family: 'Indie Flower', cursive;
+	
+
 }
+
 
 li{
 	display: inline;
@@ -17,6 +21,7 @@ h1{
 	display: inline-block;
 	padding-top: 100px;
 	margin-left:400px;
+	background-color: black;
 
 }
 h2{
@@ -28,3 +33,9 @@ p{
 	text-align: center;
 	color: white;
 }
+h3{
+	color: green;
+}
+
+
+
