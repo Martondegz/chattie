@@ -10,12 +10,6 @@
     <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 
 
-<script language="JavaScript">
-    function showInput() {
-        document.getElementById('display').innerHTML = 
-                    document.getElementById("user_input").value;
-    }
-  </script>
 
 
 
@@ -61,30 +55,49 @@
 
    
   <form>
-    <div class="small-10 column">
-    	<input  type="text" placeholder="chat"></div>
+    <div class="small-11 column">
+    <div id="displaybox"></div>
+
+    	<input  id="messageboxs" type="text" placeholder="chat"></div>
 
     
 
-    	<div class="small-2 column">
-    	<button class="button round">submit</button></div>
-    	
-    
+    	<div style="margin-right:100px;" class="small-1 column">
+    	<button class="button round" onclick="addMessage()">submit</button></div>
 
 
-
-<div class="small-1 column">
-<h3>Chat</h3></div>
-<div class="small-11 column" style="height:100px;margin-right:60px;">
-<input type="text" placeholder="text"></div>
-</form>
 
 </div>
 
-<footer style="text-align:center">
-<img style="width:20%;" src="image/chat.png">
-	&copy;<small>chattie.co</small>
-</footer>
+<script type="text/javascript">
+            var titles = [];
+            var messageInput = document.getElementById("messageboxs");
+            var displaybox = document.getElementById("displaybox");
+
+            function addMessage() {
+
+                if (messageboxs.value.length < 2) {
+                    alert("Please enter a message");
+                } else {
+                    //other.push(department.value);
+                    titles.push(messageboxs.value);;
+                    clearAndShow();
+
+                }
+
+            }
+
+            function clearAndShow() {
+                messageboxs.value = "";
+
+                displaybox.innerHTML = "";
+                displaybox.innerHTML += "Message : "+ titles.join("<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;") + "<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+
+</script>
+
+
+
 
 
 
@@ -92,5 +105,10 @@
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
+
+<footer style="text-align:center">
+<img style="width:20%;" src="image/chat.png">
+	&copy;<small>chattie.co</small>
+</footer>
   </body>
 </html>
