@@ -1,0 +1,21 @@
+body{
+	background-color: black;
+}
+
+li{
+	display: inline;
+	padding: 10px;
+	float: right;
+	font-size: 25px;
+	color: white;
+}
+h1{
+	text-align: center;
+	color: white;
+}
+.row{
+	display: inline-block;
+	padding-top: 100px;
+	margin-left:400px;
+
+}
